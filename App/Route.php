@@ -4,6 +4,21 @@
 
     class Route {
 
+        private $routes;
+
+        public function __construct() {
+            $this->initRoutes();
+            $this->run($this->getUrl());
+        }
+
+        public function getRoutes() {
+           return $this->routes;
+        }
+
+        public function setRoutes(array $routes) {
+            $this->routes = $routes;
+        }
+
         public function initRoutes() {
 
             $routes['home'] = array(
@@ -18,6 +33,16 @@
                 'action' => 'sobreNos'
             );
 
+            $this->setRoutes($routes);
+
+        }
+
+        public function run($url) {
+            foreach ($this->getRoutes() as $path => $route) {
+                if($url == $route['route']) {
+                    
+                }
+            }
         }
 
         public function getUrl() {
