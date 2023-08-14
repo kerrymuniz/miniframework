@@ -1,0 +1,16 @@
+<h1>Sobre Nós</h1>
+<hr>
+
+<?php
+    
+    /*echo '<pre>';
+    print_r($this->view->dados);
+    echo '<pre>';*/
+
+    foreach($this->view->dados as $indice => $info) {
+        echo '<h1>'.$info['titulo'];
+        echo '<br>';
+        echo $info['descricao'];
+        echo '<hr>';
+    }
+?>
